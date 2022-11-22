@@ -15,7 +15,7 @@ public class KnapSackTopDown {
         //base case of recursion and arrange table with data
         int tb[][] = new int[n + 1][w + 1];
         //initialization
-        for (int i=0; i <= n; i++)
+        for (int i = 0; i <= n; i++)
             for (int j = 1; j <= w; j++)
                 if (i == 0 || j == 0)
                     tb[i][j] = 0;
@@ -24,9 +24,8 @@ public class KnapSackTopDown {
             for (int j = 1; j <= w; j++) {
                 if (wt[i - 1] <= j) {
                     tb[i][j] = max(val[i - 1] + tb[i - 1][j - wt[i - 1]], tb[i - 1][j]);
-                }
-                else {
-                    tb[i][j] = tb[i-1][j];
+                } else {
+                    tb[i][j] = tb[i - 1][j];
                 }
             }
 
