@@ -9,8 +9,6 @@ public class SubSetSumTopDown {
         int sum = 9;
         int n = set.length;
         System.out.println(subSetSumTopDownApproach(set, sum, n));
-
-
     }
 
     private static boolean subSetSumTopDownApproach(int[] set, int sum, int n) {
