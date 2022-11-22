@@ -23,6 +23,8 @@ public class KnapSackMemoization {
             for (int j = 0; j <= w; j++) {
                 tb[i][j] = -1;
             }
+        if (tb[n][w] != -1)
+            return tb[n][w];
         if (wt[n - 1] <= w) {
             tb[n][w] = max(val[n - 1] + knapSackMemoizaion(val, wt, w - wt[n - 1], n - 1), knapSackMemoizaion(val, wt, w, n - 1));
         } else {
